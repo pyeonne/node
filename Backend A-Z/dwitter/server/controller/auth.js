@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import * as userRepository from '../data/auth.js';
 
 // TODO: Make it secure!
-const jwtSecretKey = 'ER@mJ!tgici^l#QBnJat6eLPVZdPEvEl';
+const jwtSecretKey = 'F2dN7x8HVzBWaQuEEDnhsvHXRWqAR63z';
 const jwtExpiresInDays = '2d';
 const bcryptSaltRounds = 12;
 
@@ -33,7 +33,7 @@ export async function login(req, res) {
     }
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {
-        return rew.status(401).json({ message: 'Invalid user or password' });
+        return res.status(401).json({ message: 'Invalid user or password' });
     }
     const token = createJwtToken(user.id);
     res.status(200).json({ token, username });

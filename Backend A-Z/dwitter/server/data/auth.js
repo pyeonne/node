@@ -1,11 +1,10 @@
-// abcd1234: $2b$15$9oMWpOjWjkH7TAvh4lWlteFoH1jihoi6.usudML1BLYwkxmkkJZ5i
-
+// abcd1234: $2b$12$G9xf8SFq3oTEgdj7ozHQ/uhDOyeQcUEDU8tnOcvpvApuadr3nE5Vm
 let users = [
     {
         id: '1',
         username: 'bob',
         password:
-            '$2b$15$9oMWpOjWjkH7TAvh4lWlteFoH1jihoi6.usudML1BLYwkxmkkJZ5i',
+            '$2b$12$G9xf8SFq3oTEgdj7ozHQ/uhDOyeQcUEDU8tnOcvpvApuadr3nE5Vm',
         name: 'Bob',
         email: 'bob@gmail.com',
         url: 'https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png',
