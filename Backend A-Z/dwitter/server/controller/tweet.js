@@ -35,6 +35,7 @@ export async function updateTweet(req, res) {
     }
     // 401은 로그인이 필요한 서비스인데 로그인을 하지 않았을 때
     // 403 로그인된 사용자지만 특별한 권한이 없을 때
+    console.log(tweet);
     if (tweet.userId !== req.userId) {
         return res.sendStatus(403);
     }
