@@ -5,13 +5,11 @@ export async function connectDB() {
     return Mongoose.connect(config.db.host);
 }
 
-// TODO(Ellie): Delete blow
-
-let db;
-export function getUsers() {
-    return db.collection('users');
-}
-
-export function getTweets() {
-    return db.collection('tweets');
+export function useVirtualId(schema) {
+    // _id -> id
+    schema.virtual('id').get(function () {
+        return this._id.toString();
+    });
+    schema.set('toJSON', { virtuals: true });
+    schema.set('toObject', { virtuals: true });
 }
