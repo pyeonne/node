@@ -1,6 +1,8 @@
-import { DataTypes, Sequelize } from 'sequelize';
+import SQ from 'sequelize';
 import { sequelize } from '../db/database.js';
 import { User } from './auth.js';
+const DataTypes = SQ.DataTypes;
+const Sequelize = SQ.Sequelize;
 
 const Tweet = sequelize.define('tweet', {
     id: {
