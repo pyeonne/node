@@ -1,7 +1,7 @@
 import { getUsers } from '../database/database.js';
 import MongoDb from 'mongodb';
-
 const ObjectId = MongoDb.ObjectId;
+
 export async function findByUsername(username) {
     return getUsers()
         .findOne({ username }) //
@@ -21,5 +21,5 @@ export async function createUser(user) {
 }
 
 function mapOptionalUser(user) {
-    return user ? { ...user, id: user._id } : user;
+    return user ? { ...user, id: user._id.toString() } : user;
 }
